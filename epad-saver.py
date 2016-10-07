@@ -78,7 +78,8 @@ parser.add_argument('-t', '--title', dest='title', help='Title of the pad')
 parser.add_argument('-f', '--padfile', dest='padfile', help='Path to a file containing a list of etherpads')
 parser.add_argument('-w', '--workingdir', dest='workingdir', default=".", help='Path to the directory the pad(s) are saved into; Default: .')
 parser.add_argument('-s', '--no-duplicate-check', dest='duplicateCheck', action='store_false', help="turn off the duplicate check")
-parser.add_argument('-g', '--generate-padfile', dest='genPadFile', help='Generate sample pad file to given destination')
+# Sample file generation not implemented yet
+# parser.add_argument('-g', '--generate-padfile', dest='genPadFile', help='Generate sample pad file to given destination')
 args = parser.parse_args()
 
 workingdir = os.path.abspath(args.workingdir)
