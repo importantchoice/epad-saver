@@ -54,3 +54,6 @@ optional arguments:
                         turn off the duplicate check
 ```
 
+## Notes
+
+* By default the **empty pad detection** currently only works with riseup.net pads, as the beginning of the welcome message is necessary to do this. If you are using another provider you can add the message into the welcomeMessages list.
