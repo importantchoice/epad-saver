@@ -53,6 +53,10 @@ def getFileName(workingdir, title):
     # return filename
     return workingdir + "/" + title + "-" + timestamp + ".txt"
 
+def baseURLcleanup(baseurl):
+    """Cleans up the baseurl from unwanted features"""
+    return baseurl.rstrip("/")
+
 def contentIsEmpty(content, welcomeMessages):
     """Check if the downloaded pad is empty"""
     content = content.decode('utf-8')
@@ -90,7 +94,7 @@ urls = []
 
 # Get url and title which might be provided
 if args.baseurl:
-    baseurl = args.baseurl
+    baseurl = baseURLcleanup(args.baseurl)
 
     if args.title:
         title = args.title
@@ -104,7 +108,11 @@ if args.padfile:
             for entry in padfileContent:
                 title = getEntryTitle(entry)
                 baseurl = getEntryURL(entry)
-                urls.append([baseurl, title])
+
+                # cleanup baseurl
+                baseurl = baseURLcleanup(baseurl)
+
+                urls.append( [ baseurl, title ] )
 
 # Download urls
 for url, title in urls:
