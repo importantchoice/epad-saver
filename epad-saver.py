@@ -20,7 +20,7 @@ welcomeMessages = [
 
 def getEntryTitle(entry):
     """Extracts pad title from padfile"""
-    result = re.search('^(.*)\s+<.*>\s*', entry)
+    result = re.search('\[(.*)\]\(.*\)', entry)
     if result:
         return result.group(1)
     else:
@@ -29,7 +29,7 @@ def getEntryTitle(entry):
 
 def getEntryURL(entry):
     """Extracts pad url from padfile"""
-    result = re.search('^.*<(.*)>\s*', entry)
+    result = re.search('\[.*\]\((.*)\)', entry)
     if result:
         return result.group(1)
     else:
