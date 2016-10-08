@@ -4,7 +4,8 @@
     This script downloads the content of etherpads.
 
     Padfile layout definition:
-    "^TITLE\s <BASEURL>$"
+    "[TITLE](BASEURL)"
+
 """
 
 import argparse # Parse CLI arguments
