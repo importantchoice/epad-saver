@@ -25,6 +25,7 @@ If you have more than one pad you want to download, you can use a list. The layo
 ```
 [TITLE](BASEURL)
 ```
+Note: Lines with no links will be skipped. So feel free to organize your pad list in categories or add comments to the links etc.
 
 Now you can download all pads with:
 ```

@@ -107,6 +107,10 @@ if args.padfile:
     with open(args.padfile) as f:
             padfileContent = f.readlines()
             for entry in padfileContent:
+                # skip lines which contain no links
+                if not re.search('\[.*\]\(.*\)', entry):
+                    continue
+
                 title = getEntryTitle(entry)
                 baseurl = getEntryURL(entry)
 
