@@ -20,11 +20,11 @@ The content of the pad will be saved into the current directory. The title will 
 
 * Downloading from list
 
-If you have more than one pad you want to download, you can use a list. The format looks like
+If you have more than one pad you want to download, you can use a list. The layout uses a simple mardown syntax:
+
 ```
-TITLE <BASEURL>
+[TITLE](BASEURL)
 ```
-Note: Make sure you have a whitespace character between the title and your baseurl. Also the url needs to be placed between brackets
 
 Now you can download all pads with:
 ```
