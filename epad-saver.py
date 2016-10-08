@@ -136,3 +136,4 @@ for url, title in urls:
     filename = getFileName(workingdir, title)
     with open(filename, "wb") as saveFile:
         saveFile.write(content)
+        print("  Pad saved under " + filename)
